@@ -2,6 +2,8 @@ import React from "react";
 import { Navbar } from "../Navbar/Navbar";
 import Feynman from "../Cards/FeynmanModal";
 import { Pomodoro } from "../Cards/Pomodoro";
+import FlashCards from "../Cards/FlashCards";
+import ActiveRecall from "../Cards/ActiveRecall";
 
 export const Home = () => {
   return (
@@ -19,15 +21,21 @@ export const Home = () => {
             Studying Made Easy
           </h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Your ultimate tool for effective learning.
+            All your studying techniques in one place
           </p>
         </div>
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="w-full md:w-[45%] h-[400px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="h-[400px]">
             <Pomodoro />
           </div>
-          <div className="w-full md:w-[45%] h-[400px]">
+          <div className="h-[400px]">
             <Feynman />
+          </div>
+          <div className="h-[400px]">
+            <ActiveRecall/>
+          </div>
+          <div className="h-[400px]">
+            <FlashCards />
           </div>
         </div>
       </main>
